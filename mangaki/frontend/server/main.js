@@ -1,10 +1,24 @@
 import express from 'express'
+import proxy from 'express-http-proxy'
 import historyApiFallback from 'connect-history-api-fallback'
 import config from '../config'
+import url from 'url'
 
 const app = express()
 const debug = require('debug')('app:server')
 const paths = config.utils_paths
+
+// Proxy the backend
+app.use('/api', proxy(`http://${config.backend_host}:${config.backend_port}`, {
+  decorateRequest(req) {
+    req.headers['Accept'] = 'application/json'
+    return req
+  },
+  forwardPath(req) {
+    return url.parse(req.url).path
+  }
+}))
+
 
 app.use(historyApiFallback({
   verbose: false
