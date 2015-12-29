@@ -24,7 +24,7 @@ export class LoginForm extends React.Component {
           required
         />
         <Row layout='horizontal'>
-          <input className='btn btn-primary' formNoValidate={true} type='submit' defaultValue='Connexion' />
+          <input className='btn btn-primary' formNoValidate type='submit' defaultValue='Connexion' />
         </Row>
       </div>
     )
