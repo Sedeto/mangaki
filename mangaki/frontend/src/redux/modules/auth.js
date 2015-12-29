@@ -48,7 +48,7 @@ export const actions = {
 export default handleActions({
   [REQUEST_AUTHENTICATION]: (state, {payload}) => ({
     username: payload,
-    authenticationRequest: true
+    authenticationRequested: true
   }),
 
   [LOG_OUT]: state => ({
