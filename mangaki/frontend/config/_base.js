@@ -23,6 +23,12 @@ const config = {
   server_port : process.env.PORT || 3000,
 
   // ----------------------------------
+  // Backend Proxy Configuration
+  // ----------------------------------
+  backend_host : 'localhost',
+  backend_port : 8080,
+
+  // ----------------------------------
   // Compiler Configuration
   // ----------------------------------
   compiler_css_modules     : true,
