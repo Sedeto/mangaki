@@ -1,14 +1,19 @@
 import React from 'react'
+import Formsy from 'formsy-react'
 import { Input, Row } from 'formsy-react-components'
 
 export class LoginForm extends React.Component {
+  static propTypes = {
+    onSubmit: React.PropTypes.func.isRequired
+  }
+
   render () {
     const sharedProps = {
       layout: 'horizontal'
     }
 
     return (
-      <div>
+      <Formsy.Form onSubmit={this.props.onSubmit}>
         <Input
           {...sharedProps}
           name='username'
@@ -26,7 +31,7 @@ export class LoginForm extends React.Component {
         <Row layout='horizontal'>
           <input className='btn btn-primary' formNoValidate type='submit' defaultValue='Connexion' />
         </Row>
-      </div>
+      </Formsy.Form>
     )
   }
 }
