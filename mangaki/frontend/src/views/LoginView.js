@@ -13,9 +13,7 @@ export class LoginView extends React.Component {
           <div className='page-header'>
             <h1>Se connecter</h1>
           </div>
-          <Formsy.Form onSubmit={this.logIn} ref='form'>
-            <LoginForm />
-          </Formsy.Form>
+          <LoginForm onSubmit={::this.logIn} />
         </div>
       </div>
     )
