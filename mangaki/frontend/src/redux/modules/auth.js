@@ -26,7 +26,7 @@ export const logIn = (username, password) => {
   return (dispatch, getState) => {
     dispatch(requestAuthentication(username))
     /** Let's get a JWT token **/
-    return axios.post('/api/auth', {username, password})
+    return axios.post('/api/auth/', {username, password})
     .then(resp => resp.data)
     .then(({token}) =>
       /** Got a token, logged in! **/
