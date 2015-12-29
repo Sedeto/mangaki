@@ -1,11 +1,20 @@
 import React from 'react'
-import Formsy from 'formsy-react'
-
 import LoginForm from 'components/LoginForm'
 
+import { connect } from 'react-redux'
+import { actions as loginActions } from 'redux/modules/auth'
+
+const mapStateToProps = state => state
+
 export class LoginView extends React.Component {
-  logIn (model) {
+  static propTypes = {
+    logIn: React.PropTypes.func.isRequired
   }
+
+  logIn (model) {
+    this.props.logIn(model.username, model.password)
+  }
+
   render () {
     return (
       <div className='container'>
@@ -20,4 +29,4 @@ export class LoginView extends React.Component {
   }
 }
 
-export default LoginView
+export default connect(mapStateToProps, loginActions)(LoginView)
