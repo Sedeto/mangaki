@@ -39,6 +39,11 @@ export const logIn = (username, password) => {
   }
 }
 
+export const actions = {
+  logIn,
+  logOut
+}
+
 // Reducer
 export default handleActions({
   [REQUEST_AUTHENTICATION]: (state, {payload}) => ({
