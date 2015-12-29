@@ -47,6 +47,7 @@ export const actions = {
 // Reducer
 export default handleActions({
   [REQUEST_AUTHENTICATION]: (state, {payload}) => ({
+    ...state,
     username: payload,
     authenticationRequested: true
   }),
@@ -56,6 +57,7 @@ export default handleActions({
   }),
 
   [LOGGED_IN]: (state, {payload}) => ({
+    ...state,
     isAuthenticated: true,
     authenticationRequested: false,
     token: payload.token,
