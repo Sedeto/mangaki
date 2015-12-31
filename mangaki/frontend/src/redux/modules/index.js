@@ -1,8 +1,11 @@
 import { combineReducers } from 'redux'
 import { routeReducer } from 'redux-simple-router'
+
 import auth from './auth'
+import anime from './anime'
 
 export default combineReducers({
   router: routeReducer,
-  auth
+  auth,
+  anime
 })
