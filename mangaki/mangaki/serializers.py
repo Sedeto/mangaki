@@ -12,26 +12,27 @@ WORK_FIELDS = ('id',
 class AnimeSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = models.Anime
-        fields = WORK_FIELDS + ('director',
-                  'composer',
-                  'studio',
-                  'editor',
-                  'anime_type',
-                  'genre',
-                  'nb_episodes',
-                  'origin',
-                  'anidb_aid')
+        fields = WORK_FIELDS + ('author',
+                                'director',
+                                'composer',
+                                'studio',
+                                'editor',
+                                'anime_type',
+                                'genre',
+                                'nb_episodes',
+                                'origin',
+                                'anidb_aid')
 
 class MangaSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.Manga
         fields = WORK_FIELDS + ('vo_title',
-                  'mangaka',
-                  'writer',
-                  'editor',
-                  'origin',
-                  'genre',
-                  'manga_type')
+                                'mangaka',
+                                'writer',
+                                'editor',
+                                'origin',
+                                'genre',
+                                'manga_type')
 
 class EditorSerializer(serializers.ModelSerializer):
     class Meta:
