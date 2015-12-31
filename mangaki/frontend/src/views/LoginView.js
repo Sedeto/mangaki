@@ -4,7 +4,7 @@ import LoginForm from 'components/LoginForm'
 import { connect } from 'react-redux'
 import { actions as loginActions } from 'redux/modules/auth'
 
-const mapStateToProps = state => state
+const mapStateToProps = state => ({})
 
 export class LoginView extends React.Component {
   static propTypes = {
