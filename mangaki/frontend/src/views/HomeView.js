@@ -29,7 +29,7 @@ export class HomeView extends React.Component {
       <div>
         {_.map(links, (text, href) => {
           return (
-            <div className='col-md-4 col-sm-12 margin'>
+            <div key={href} className='col-md-4 col-sm-12 margin'>
               <a className='btn btn-mangaki btn-lg' href={href}>{text}</a>
             </div>
           )
