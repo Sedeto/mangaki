@@ -24,6 +24,7 @@
   "license": "AGPL",
   "dependencies": {
     "axios": "^0.8.1",
+    "chart.js": "^1.0.2",
     "classnames": "^2.2.1",
     "debug": "^2.2.0",
     "dotenv": "^1.2.0",
